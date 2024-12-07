@@ -1,18 +1,18 @@
-# Use the official Nginx image from the Docker Hub
+# Use official Nginx image as base image
 FROM nginx:alpine
 
-# Set the maintainer label (optional)
-LABEL maintainer="your-email@example.com"
+# Create the /green folder in the container
+RUN mkdir -p /green
 
-# Copy the local content (your /green directory) into the container
-# The root directory for Nginx is /usr/share/nginx/html
-COPY ./green /usr/share/nginx/html/green
-
-# Replace the default nginx.conf with your custom configuration
+# Copy the custom nginx.conf into the container
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Expose the port Nginx is running on (80)
+# Copy the index.html to the /green directory
+COPY index.html /green/index.html
+
+# Expose port 80 for the container
 EXPOSE 80
 
-# Start Nginx when the container runs
+# Start nginx when the container runs
 CMD ["nginx", "-g", "daemon off;"]
+
