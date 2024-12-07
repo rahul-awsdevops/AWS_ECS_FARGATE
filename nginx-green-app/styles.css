@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: green !important; /* Added !important to force application */
+    background-color: green !important; /* Add !important to force application */
     display: flex;
     justify-content: center;
     align-items: center;
