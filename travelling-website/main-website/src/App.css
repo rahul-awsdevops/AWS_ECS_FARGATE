@@ -1,0 +1,70 @@
+/* Set the background image for the entire body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('/Users/rahulranjan/Desktop/AWS_ECS_FARGATE/travelling-website/main-website/public/images/rajasthan_goa_combo.png'); /* Your combined background image */
+  background-size: cover; /* Ensures the image covers the whole screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  color: #fff; /* Sets text color to white to contrast with background */
+}
+
+/* Header Styling */
+.App-header {
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navbar styling */
+.App-header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.App-header nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.App-header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Destination section */
+.destination {
+  margin: 40px auto;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to make the text readable */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.destination h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.destination-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.destination-image {
+  width: 45%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destination-description {
+  width: 50%;
+  font-size: 16px;
+  line-height: 1.5;
+}
