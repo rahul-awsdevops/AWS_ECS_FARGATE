@@ -1,5 +1,5 @@
 server {
-    listen 80;
+    listen ${NGINX_PORT};
 
     # Serve React app
     location / {
@@ -10,11 +10,12 @@ server {
 
     # Proxy Goa service
     location /goa {
-        proxy_pass http://${GOA_API_URL}:81/goa;  # Replace with ECS container's IP/ALB for Goa
+        proxy_pass http://${GOA_API_URL}/goa;
     }
 
     # Proxy Rajasthan service
     location /rajasthan {
-        proxy_pass http://${RAJASTHAN_API_URL}:82/rajasthan;  # Replace with ECS container's IP/ALB for Rajasthan
+        proxy_pass http://${RAJASTHAN_API_URL}/rajasthan;
     }
 }
+
